@@ -1,0 +1,21 @@
+# Work items of the working group. Shown on the Work Items page.
+#
+#   id:      short name, also the name of the folder in 03-Work-Items
+#   name:    full name of the work item
+#   status:  current status of the work, for example "Planned",
+#            "In development", "Approved", or "Published". Public reviews
+#            are not entered here: the Work Items page shows them
+#            automatically, with their dates, from pub.ostera.org.
+#   draft:   path of the current draft, relative to the repository root,
+#            or leave it empty, or leave the line out
+#   summary: one sentence describing the work item
+#
+# Example:
+#
+# - id: abc
+#   name: "Example Specification (ABC)"
+#   status: "In development"
+#   draft: "03-Work-Items/abc/v1.0/draft-ts-abc-01.pdf"
+#   summary: "One sentence describing the work item."
+
+[]

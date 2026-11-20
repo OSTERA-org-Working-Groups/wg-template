@@ -1,0 +1,55 @@
+# Jekyll configuration for the working group website.
+# The site is built from this folder by .github/workflows/pages.yml.
+# Do not set baseurl. GitHub Pages sets it automatically.
+#
+# After creating a repository from this template, replace every [WG_...]
+# placeholder in the repository. To find them all, run:
+#   grep -rn '\[WG_' .
+#
+#   [WG_NAME]               full name, such as JSON Signature Scheme
+#   [WG_ACRONYM]            such as JSS
+#   [WG_ID]                 the repository name, such as jss
+#   [WG_CHAIR]              the chair's name
+#   [WG_CHARTER_URL]        link to the approved charter
+#   [WG_SHORT_DESCRIPTION]  one sentence, used by search engines
+#   [WG_SCOPE]              the scope, in the repository README
+#   [WG_PURPOSE]            the purpose, on the website home and charter pages
+#   [WG_GOALS]              the goals, on the website home and charter pages
+
+# Settings used by the theme, on any type of site.
+title: "OSTERA [WG_NAME] ([WG_ACRONYM]) Working Group"
+short_title: "[WG_NAME] ([WG_ACRONYM])"
+description: "[WG_SHORT_DESCRIPTION]"
+
+remote_theme: OSTERA-org/ostera-pages-theme
+plugins:
+  - jekyll-remote-theme
+
+# The section marked as current in the OSTERA menu bar:
+# "wg" for Working Groups, or "pub" for Publications.
+ostera_section: wg
+
+# The site's GitHub repository. The theme links to it from the site bar menu and
+# the footer, and the working group pages use it to link to the repository's
+# folders, files, and issues.
+source_url: https://github.com/OSTERA-org-Working-Groups/[WG_ID]
+
+# Settings used only by the working group pages (index.md, charter.md, and
+# publications.md).
+chair: "[WG_CHAIR]"
+charter_url: "[WG_CHARTER_URL]"
+publications_url: "https://pub.ostera.org/"
+
+# The site bar menu. Each url starts with "/" and leaves out the site's own
+# path (for example "/jss"), which is added automatically.
+navigation:
+  - title: Home
+    url: /
+  - title: Charter
+    url: /charter/
+  - title: Meetings
+    url: /meetings/
+  - title: Work Items
+    url: /work-items/
+  - title: Publications
+    url: /publications/

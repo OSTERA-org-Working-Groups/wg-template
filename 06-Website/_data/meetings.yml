@@ -1,0 +1,16 @@
+# Meetings of the working group, newest first. Shown on the Meetings page.
+#
+#   date:    meeting date (YYYY-MM-DD), which is also the name of the
+#            meeting folder in 02-Meetings
+#   title:   short description of the meeting
+#   agenda:  true once 02-Meetings/<date>/agenda.md exists
+#   report:  true once 02-Meetings/<date>/report.md exists
+#
+# Example:
+#
+# - date: 2026-12-01
+#   title: "Working group meeting"
+#   agenda: true
+#   report: false
+
+[]
