@@ -10,11 +10,12 @@
 #   [WG_ACRONYM]            such as JSS
 #   [WG_ID]                 the repository name, such as jss
 #   [WG_CHAIR]              the chair's name
-#   [WG_CHARTER_URL]        link to the approved charter
-#   [WG_SHORT_DESCRIPTION]  one sentence, used by search engines
-#   [WG_SCOPE]              the scope, in the repository README
-#   [WG_PURPOSE]            the purpose, on the website home and charter pages
-#   [WG_GOALS]              the goals, on the website home and charter pages
+#   [WG_CHARTER_URL]        full link to the approved charter
+#   [WG_SHORT_DESCRIPTION]  one sentence, for search engines and the home page banner
+#   [WG_SCOPE]              the purpose and scope from the charter, in the README and on the home page
+#
+# The goals and outcomes section of the home page (index.md) is optional and
+# is filled in by hand.
 
 # Settings used by the theme, on any type of site.
 title: "OSTERA [WG_NAME] ([WG_ACRONYM]) Working Group"
@@ -29,24 +30,25 @@ plugins:
 # "wg" for Working Groups, or "pub" for Publications.
 ostera_section: wg
 
-# The site's GitHub repository. The theme links to it from the site bar menu and
-# the footer, and the working group pages use it to link to the repository's
-# folders, files, and issues.
-source_url: https://github.com/OSTERA-org-Working-Groups/[WG_ID]
+# The site's GitHub repository, ending with "/". The theme links to it from the
+# site bar menu and the footer, and the working group pages add paths to it
+# (such as "issues/new/choose") to link to the repository's folders, files, and
+# issues.
+repo_url: https://github.com/OSTERA-org-Working-Groups/[WG_ID]/
 
-# Settings used only by the working group pages (index.md, charter.md, and
-# publications.md).
+# Settings used only by the working group pages (index.md and publications.md).
 chair: "[WG_CHAIR]"
 charter_url: "[WG_CHARTER_URL]"
 publications_url: "https://pub.ostera.org/"
 
-# The site bar menu. Each url starts with "/" and leaves out the site's own
-# path (for example "/jss"), which is added automatically.
+# The site bar menu. A url on this site starts with "/" and leaves out the
+# site's own path (for example "/jss"), which is added automatically. A full
+# url (with "://"), such as the charter, is used as written.
 navigation:
   - title: Home
     url: /
   - title: Charter
-    url: /charter/
+    url: "[WG_CHARTER_URL]"
   - title: Meetings
     url: /meetings/
   - title: Work Items

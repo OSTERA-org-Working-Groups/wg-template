@@ -3,10 +3,11 @@
 This is the repository of the OSTERA [WG_NAME] Working Group.
 
 * **Chair:** [WG_CHAIR]
+* **Charter:** [WG_CHARTER_URL]
 * **Website:** https://wg.ostera.org/[WG_ID]/
 * **Published documents:** https://pub.ostera.org/
 
-## Scope
+## Purpose and Scope
 
 [WG_SCOPE]
 
@@ -41,7 +42,7 @@ This repository is public. Material that is confidential to OSTERA members or to
 
 ## Publications and Final Deliverables
 
-Approved final deliverables are published at https://pub.ostera.org/, from the [OSTERA publications repository](https://github.com/OSTERA-org/publications), not in this working group repository.
+Approved final deliverables are published at https://pub.ostera.org/, from the [OSTERA publications repository](https://github.com/OSTERA-org/publications/), not in this working group repository.
 
 ## Code of Conduct
 

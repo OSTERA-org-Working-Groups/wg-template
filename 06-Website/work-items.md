@@ -16,8 +16,8 @@ No work items have been started yet.
 
 * **Status:** {{ item.status }}
 {%- if item.draft and item.draft != "" %}
-* **Current draft:** [{{ item.draft | split: '/' | last }}]({{ site.source_url }}/blob/main/{{ item.draft }})
-* **Folder:** [03-Work-Items/{{ item.id }}]({{ site.source_url }}/tree/main/03-Work-Items/{{ item.id }})
+* **Current draft:** [{{ item.draft | split: '/' | last }}]({{ site.repo_url }}blob/main/{{ item.draft }})
+* **Folder:** [03-Work-Items/{{ item.id }}]({{ site.repo_url }}tree/main/03-Work-Items/{{ item.id }}/)
 {%- endif %}
 
 **Public reviews:**
@@ -38,6 +38,6 @@ The public reviews of each work item are listed above, with their current status
 
 ## Commenting on a Draft
 
-To comment on a draft, open an issue in the [repository]({{ site.source_url }}/issues/new/choose) using the "Work Item Comment" template.
+To comment on a draft, open an issue in the [repository]({{ site.repo_url }}issues/new/choose) using the "Work Item Comment" template.
 
 Drafts are works in progress. They have not been approved by the Association and must not be cited as OSTERA publications. By submitting any contribution (an issue, a pull request, or a comment), you agree that your contribution is made under the [OSTERA IPR and Copyright Policy](https://ostera.org/policies/).
