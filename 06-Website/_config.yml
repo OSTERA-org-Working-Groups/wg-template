@@ -1,0 +1,73 @@
+# Jekyll configuration for the working group website.
+# The site is built from this folder by .github/workflows/work-items.yml.
+# Do not set baseurl. GitHub Pages sets it automatically.
+#
+# After creating a repository from this template, replace every [WG_...]
+# placeholder in the repository. To find them all, run:
+#   grep -rn '\[WG_' .
+#
+#   [WG_NAME]               name of the working group, e.g., JSON Signature Scheme
+#                             found in README.md, 06-Website/_config.yml, 
+#                             and 06-Website/index.md
+#   [WG_ACRONYM]            such as JSS; type "none" if there is none
+#                             found in README.md, 06-Website/_config.yml, 
+#                             and 06-Website/index.md
+#   [WG_ID]                 the repository name on GitHub, such as jss 
+#                             (wg-setup.pl reads it from git)
+#                             found in README.md, 03-Work-Items/README.md, 
+#                             06-Website/_config.yml, and 06-Website/README.md
+#   [WG_CHAIR]              the primary chair's name, edit files by hand to add more
+#                             found in README.md and 06-Website/_config.yml
+#   [WG_CHARTER_URL]        full link to the approved charter
+#                             found in README.md, 06-Website/_config.yml, 
+#                             and 06-Website/index.md
+#   [WG_SHORT_DESCRIPTION]  one sentence, for search engines and the home page banner
+#                             found in 06-Website/_config.yml and 06-Website/index.md
+#   [WG_SCOPE]              the purpose and scope from the charter, filled in by hand
+#                             found in README.md and 06-Website/index.md
+#
+# The goals and outcomes section of the home page (index.md) is optional and
+# is filled in by hand.
+
+# Settings used by the theme, on any type of site.
+title: "OSTERA [WG_NAME] ([WG_ACRONYM]) Working Group"
+short_title: "[WG_NAME] ([WG_ACRONYM])"
+description: "[WG_SHORT_DESCRIPTION]"
+
+remote_theme: OSTERA-org/ostera-pages-theme
+plugins:
+  - jekyll-remote-theme
+
+# Files in this folder that are not part of the site.
+exclude:
+  - README.md
+
+# The section marked as current in the OSTERA menu bar:
+# "wg" for Working Groups, or "pub" for Publications.
+ostera_section: wg
+
+# The site's GitHub repository, ending with "/". The theme links to it from the
+# site bar menu and the footer, and the working group pages add paths to it
+# (such as "issues/new/choose") to link to the repository's folders, files, and
+# issues.
+repo_url: https://github.com/OSTERA-org-Working-Groups/[WG_ID]/
+
+# Settings used only by the working group pages (index.md and publications.md).
+chair: "[WG_CHAIR]"
+charter_url: "[WG_CHARTER_URL]"
+publications_url: "https://pub.ostera.org/"
+
+# The site bar menu. A url on this site starts with "/" and leaves out the
+# site's own path (for example "/jss"), which is added automatically. A full
+# url (with "://"), such as the charter, is used as written.
+navigation:
+  - title: Home
+    url: /
+  - title: Charter
+    url: "[WG_CHARTER_URL]"
+  - title: Meetings
+    url: /meetings/
+  - title: Work Items
+    url: /work-items/
+  - title: Publications
+    url: /publications/

@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: /reviews.json
+---
+{% include reviews-json.html %}

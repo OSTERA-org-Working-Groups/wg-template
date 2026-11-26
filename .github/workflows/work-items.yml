@@ -1,0 +1,38 @@
+# Checks 03-Work-Items on every pull request, and builds and publishes the
+# website on every push to main. Both are done by the shared workflows of
+# OSTERA-org-Working-Groups/wg-tools, so they are the same for every
+# Working Group and are changed there, not here.
+#
+# The @v1 at the end of each uses: line is the version of wg-tools that this
+# repository uses. The Makefile reads it from here too, so make on your
+# computer runs the same version. Change both lines together, only when the
+# wg-tools release notes say to.
+
+name: Work items
+
+on:
+  pull_request:
+    paths: ["03-Work-Items/**", ".github/workflows/work-items.yml"]
+  push:
+    branches: [main]
+    paths: ["03-Work-Items/**", "06-Website/**", ".github/workflows/work-items.yml"]
+  workflow_dispatch:
+
+jobs:
+  check:
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+    uses: OSTERA-org-Working-Groups/wg-tools/.github/workflows/check.yml@v1
+
+  website:
+    # The template itself has no website.
+    if: github.event_name != 'pull_request' && github.repository != 'OSTERA-org-Working-Groups/wg-template'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    uses: OSTERA-org-Working-Groups/wg-tools/.github/workflows/pages.yml@v1

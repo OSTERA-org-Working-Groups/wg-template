@@ -1,0 +1,16 @@
+# Files the operating system leaves in folders
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# The make commands, downloaded from wg-tools by the Makefile
+.wg-tools/
+
+# Written by work-items.pl when the site is built; never committed
+06-Website/_data/work_items/
+06-Website/work-items/
+
+# Jekyll output, if the site is built locally
+06-Website/_site/
+06-Website/.jekyll-cache/
